@@ -1,0 +1,21 @@
+.lightMode {
+  /* --light-color: #f0f3f5;
+  --black-color: #191919;
+  --dark-color: #262626;
+  --grey-color: #c3c3c3;
+  --grey-color: #a2a3a3;
+  
+  --red-color: #dc3848;
+  --pink-color: #ff6c84;
+  --purple-color: #686ff9;
+  --green-color: #69c8ba;
+  --blue-color: #67aefa;
+  --darkblue-color: #1f2a40;
+  --lightblue-color: #b3dcd9; */
+  
+  --white-color: #141414;
+
+  --main-color: #fcfcfc;
+  --secondary-color: #f2f0f0;
+  --hover-color: rgba(0, 0, 0, 0.04);
+}

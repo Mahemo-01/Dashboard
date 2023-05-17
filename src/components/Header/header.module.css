@@ -1,0 +1,28 @@
+header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.title {
+  font-size: 2rem;
+  display: flex;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sub {
+  font-size: 1rem;
+  color: var(--green-color);
+  user-select: none;
+  font-weight: 400;
+}
+
+.row{
+
+}
