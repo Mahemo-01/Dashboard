@@ -1,4 +1,5 @@
 .chart_cont{
   height: 75vh;
-  /* height: 100%; */
+  /* background-color: var(--pink-color); */
+  display: flex;
 }

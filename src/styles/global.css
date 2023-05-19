@@ -25,6 +25,15 @@
   --main-color:      #131b2d;
   --secondary-color: #1f2a40;
   --hover-color: rgba(255, 255, 255, 0.08);
+  --chart-color: white;
+  --tooltip-color: black;
+
+  --chart-color-1: #e8c0a0;
+  --chart-color-2: #f47560;
+  --chart-color-3: #f1e15b;
+  --chart-color-4: #e8a838;
+  --chart-color-5: #60cdbb;
+  --chart-color-6: #97e3d5;
 }
 
 .app {

@@ -4,78 +4,64 @@ import { mockBarData as data } from '../../data/mockData'
 import styles from './barchart.module.css'
 
 export function BarChart() {
+  const newData = data
+  newData.map((country) => {
+    country['All Medals'] = country['Gold Medal'] + country['Bronze Medal'] + country['Silver Medal']
+  })
+
   return (
     <ResponsiveBar
-      data={data}
+      data={newData}
       theme={{
         // yo
         axis: {
           domain: {
             line: {
-              stroke: 'red',
+              stroke: 'var(--chart-color)',
             },
           },
           legend: {
             text: {
-              fill: 'red',
+              fill: 'var(--chart-color)',
             },
           },
           ticks: {
             line: {
-              stroke: 'red',
-              strokeWidth: 1,
+              stroke: 'var(--chart-color)',
+              strokeWidth: 10,
             },
             text: {
-              fill: 'red',
+              fill: 'var(--chart-color)',
             },
           },
         },
         legends: {
           text: {
-            fill: 'red',
+            fill: 'var(--chart-color)',
           },
         },
         grid: {
           line: {
-            stroke: 'red',
+            stroke: 'var(--chart-color)',
           },
         },
+        tooltip: {
+          container: {
+            color: 'var(--tooltip-color)',
+          }
+        }
       }}
       keys={[
-        'hot dog',
-        'burger',
-        'sandwich',
-        'kebab',
-        'fries',
-        'donut'
+        'Gold Medal',
+        'Silver Medal',
+        'Bronze Medal',
+        'All Medals',
       ]}
       indexBy="country"
-      margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+      margin={{ top: 50, right: 130, bottom: 50, left: 50 }}
       groupMode="grouped"
       valueScale={{ type: 'linear' }}
-      indexScale={{ type: 'band', round: true }}
-      valueFormat=" >-"
       colors={{ scheme: 'nivo' }}
-      defs={[
-        {
-          id: 'dots',
-          type: 'patternDots',
-          background: 'inherit',
-          color: '#38bcb2',
-          size: 4,
-          padding: 1,
-          stagger: true
-        },
-        {
-          id: 'lines',
-          type: 'patternLines',
-          background: 'inherit',
-          color: '#eed312',
-          rotation: -45,
-          lineWidth: 6,
-          spacing: 10
-        }
-      ]}
       fill={[
         {
           match: {
@@ -90,9 +76,6 @@ export function BarChart() {
           id: 'lines'
         }
       ]}
-      borderColor="black"
-      axisTop={null}
-      axisRight={null}
       axisBottom={{
         tickSize: 5,
         tickPadding: 5,
@@ -110,14 +93,12 @@ export function BarChart() {
         legendOffset: -40
       }}
       enableGridX={true}
-      enableLabel={false}
       labelTextColor={{ theme: 'background' }}
       legends={[
         {
           dataFrom: 'keys',
           anchor: 'bottom-right',
           direction: 'column',
-          justify: false,
           translateX: 120,
           translateY: 0,
           itemWidth: 100,
@@ -128,7 +109,6 @@ export function BarChart() {
         }
       ]}
       role="application"
-      isFocusable={true}
       ariaLabel="Nivo bar chart demo"
       barAriaLabel={e => e.id + ": " + e.formattedValue + " in country: " + e.indexValue}
     />
