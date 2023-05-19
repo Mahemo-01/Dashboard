@@ -320,7 +320,8 @@ export const mockTransactions = [
 export const mockBarData = [
   {
     "country": "United States",
-    'Gold Medal': 1174,
+    'Gold Medal': 1200,
+    // 'Gold Medal': 1174,
     'Silver Medal': 952,
     'Bronze Medal': 833,
   },
@@ -328,7 +329,7 @@ export const mockBarData = [
     "country": "Mexico",
     'Gold Medal': 600,
     'Silver Medal': 400,
-    'Bronze Medal': 2000,
+    'Bronze Medal': 500,
   },
   {
     "country": "Canada",

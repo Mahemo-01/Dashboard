@@ -17,7 +17,8 @@
 
   --main-color: #fcfcfc;
   --secondary-color: #f2f0f0;
+
+  --chart-main-color: #a2a3a3;
+
   --hover-color: rgba(0, 0, 0, 0.04);
-  --chart-color: black;
-  --tooltip-color: white;
 }
