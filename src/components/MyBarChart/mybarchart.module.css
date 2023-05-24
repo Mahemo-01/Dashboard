@@ -1,6 +1,7 @@
 .main_cont{
   --space-size: 2rem;
   --gap-size: 1rem;
+  --padding-size: 1rem;
   height: 100%;
   display: flex;
   gap: var(--gap-size);
@@ -61,15 +62,16 @@
   width: calc(100% - var(--space-size));
   height: 100%;
   display: flex;
-  gap: var(--gap-size);
-  padding: calc((var(--space-size) * .25)) var(--gap-size);
+  gap: var(--padding-size);
+  padding: calc((var(--space-size) * .25)) var(--padding-size);
 }
 
 .chart_item{
-  flex: 1;
   display: flex;
   align-items: end;
+  justify-content: end;
   position: relative;
+  flex: 1;
 }
 
 .chart_item::before {
@@ -86,16 +88,21 @@
 }
 
 .bar_line{
-  flex: 1;
+  width: 100%;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsla(0, 0%, 0%, 0.5);
+  font-size: .8rem;
 }
 
 .index_cont {
   width: calc(100% - var(--space-size));
   min-height: calc((var(--space-size) * 2.25));
   display: flex;
-  padding: 0 var(--gap-size);
-  gap: var(--gap-size);
+  padding: 0 var(--padding-size);
+  gap: var(--padding-size);
 }
 
 .name {
@@ -127,9 +134,14 @@
 }
 
 .legend {
+  cursor: pointer;
   display: flex;
   gap: .5rem;
   line-height: 20px;
+}
+
+.legend:hover{
+  color: var(--purple-color);
 }
 
 .box {

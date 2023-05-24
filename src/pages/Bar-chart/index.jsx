@@ -19,7 +19,8 @@ export function Bar() {
         data={data}
         indexBy={'country'}
         keys={['Gold Medal', 'Silver Medal', 'Bronze Medal']}
-      // keys={['Gold Medal', 'Silver Medal', 'Bronze Medal', 'All Medals']}
+        // keys={['Gold Medal', 'Silver Medal', 'Bronze Medal', 'All Medals']}
+        groupMode={'stacked'}
       // reverse={true}
       >
       </MyBarChart>
